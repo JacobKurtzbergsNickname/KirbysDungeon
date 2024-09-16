@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'dungeon',
-  templateUrl: './dungeon.component.html',
-  styleUrls: ['./dungeon.component.scss']
+  selector: "dungeon",
+  templateUrl: "./dungeon.component.html",
+  styleUrls: ["./dungeon.component.scss"]
 })
 export class DungeonComponent {
-  title = 'Kirbys Dungeon';
+  title = "Kirbys Dungeon";
   chamber = 0;
 
   nextChamber(){

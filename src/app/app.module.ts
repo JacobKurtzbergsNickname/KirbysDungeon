@@ -1,18 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DungeonComponent } from './dungeon/dungeon.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { DungeonComponent } from "./dungeon/dungeon.component";
+import { ChamberComponent } from "./chamber/chamber.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DungeonComponent
+    DungeonComponent,
+    ChamberComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
