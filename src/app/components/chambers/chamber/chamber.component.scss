@@ -1,0 +1,29 @@
+/* chamber.component.scss */
+
+/* Parent container styling */
+.parent-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  height: 60vh; /* Full viewport height for demonstration */
+}
+
+/* Container styling */
+.image-container {
+  width: 80%; /* Set desired width as a percentage for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 850px; /* Set a maximum width */
+  max-height: 850px; /* Set a maximum height */
+  overflow: hidden; /* Hide any overflow */
+  display: flex; /* Center the image */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+/* Ensure the image fits within its container */
+img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* or cover, depending on your needs */
+}

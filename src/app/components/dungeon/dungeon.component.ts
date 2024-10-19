@@ -1,13 +1,16 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: "dungeon",
+  selector: "robur-dungeon",
   templateUrl: "./dungeon.component.html",
   styleUrls: ["./dungeon.component.scss"]
 })
 export class DungeonComponent {
   title = "Kirbys Dungeon";
   chamber = 0;
+
+  private _router = inject(Router);
 
   nextChamber(){
     this.chamber++ 
@@ -20,9 +23,7 @@ export class DungeonComponent {
   }
 
   showChamber(){
-    console.groupCollapsed("this.stepsTaken");
-    console.log(this.chamber);
-    console.groupEnd();
+    this._router.navigate(["/chamber", this.chamber]);
   }
 
 }

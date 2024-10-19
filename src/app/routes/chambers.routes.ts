@@ -1,13 +1,13 @@
 import { Routes } from "@angular/router";
-import { ChamberComponent } from "../chamber/chamber.component";
+import { ChamberComponent, chamberResolve } from "../components";
+
 
 export const chambers: Routes = [
   {
-    path: "chamber",
+    path: "chamber/:chamber",
     component: ChamberComponent,
-    children: [
-      // {path: "chamber/:id", component: ChamberComponent}
-    ]
+    resolve: {chamberProps: chamberResolve},
+    runGuardsAndResolvers: "always"
   },
   { path: "", redirectTo: "/chamber", pathMatch: "full" }
 ]
